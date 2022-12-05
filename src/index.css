@@ -1,0 +1,93 @@
+:root {
+  --blue: #0b5fff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #da1414;
+  --orange: #b95000;
+  --yellow: #ffc107;
+  --green: #287d3d;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #FFF;
+  --gray: #6b6c7e;
+  --gray-dark: #393a4a;
+  --primary: #0b5fff;
+  --secondary: #6b6c7e;
+  --success: #287d3d;
+  --info: #2e5aac;
+  --warning: #b95000;
+  --danger: #da1414;
+  --light: #f1f2f5;
+  --dark: #272833;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+}
+
+/* -------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* body {
+  padding-top: 90px;
+} */
+
+span {
+  background-color: var(--yellow);
+  padding: 0 .5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+} */
+
+.btn {
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid var(--yellow);
+  cursor: pointer;
+}
+
+.btn-light {
+  background: #ffffff33;
+  border: 2px solid #ffffff33;
+}
+
+/* .btn:hover {
+  background: #ffffff33;
+} */
+
+
+
+/* --------------- Media Querries -------------- */
+@media screen and (max-width: 940px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}

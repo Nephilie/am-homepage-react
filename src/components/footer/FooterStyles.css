@@ -1,0 +1,35 @@
+.footer {
+    background-color: var(--dark);
+    box-shadow: 0 1px 11px -2px black;
+    padding-top: 3rem;
+    color: var(--light);
+}
+
+.footer-container {
+    padding: 20px;
+}
+
+.footer a{
+    color: var(--light);
+}
+.footer a:hover{
+    color: var(--yellow);
+}
+
+.footer #social-media {
+    margin-top: 20px;
+    padding-top: 30px;
+    background-color: var(--dark);
+    height: 96px;
+}
+
+.footer #social-media a {
+    padding: 0 5px;  
+}
+
+.footer #copyright {
+    padding-top: 10px;
+    padding-bottom: 2rem;
+    color: var(--light);
+    background-color: var(--dark);
+}

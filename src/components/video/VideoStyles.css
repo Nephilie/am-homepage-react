@@ -1,0 +1,56 @@
+#video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-hero {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+}
+
+.video-hero .content {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40vh;
+}
+
+.video-hero .content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.video-hero p {
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin: 0 3rem;
+}
+.video-hero span {
+    background-color: var(--yellow);
+    padding: 0 .5rem;
+  }
+
+.video-hero .btn {
+    margin: 1rem .2rem;
+    
+}
+
+
+/* --------- Media Query -------- */
+@media screen and (max-width:640px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+    
+    .content p {
+        font-size: 1.4rem;
+        margin-bottom: 1.6rem;
+    }
+}

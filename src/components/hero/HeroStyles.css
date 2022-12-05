@@ -1,0 +1,44 @@
+.hero-img {
+    background: #0000004d;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-img h1 {
+    font-size: 3.75rem;
+    text-transform: uppercase;
+    background-color: #f1c400;   
+}
+
+.hero-img p {
+    font-size: 2.25rem;
+    font-weight: 400;
+    background-color: #5b6770;
+}
+
+
+/* --------- Media Query -------- */
+@media screen and (max-width:640px) {
+    .hero-img {
+        height: 60vh;
+    }
+    .hero-img h1 {
+        font-size: 2rem;
+    }
+}
