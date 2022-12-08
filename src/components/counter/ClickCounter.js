@@ -1,49 +1,43 @@
-import { React, useEffect, useState } from "react";
-import { FaHistory, FaPlus, FaMinus } from "react-icons/fa";
-import './ClickCounterStyles.css'
+import { FaMinus, FaPlus, FaRedoAlt } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+
+import { counterActions } from "../../store/counter-slice";
+import "./ClickCounterStyles.css";
 
 const ClickCounter = () => {
-  const [counter, setCounter] = useState(5);
+  const dispatch = useDispatch();
+  const counter = useSelector((state) => state.counter.counter);
 
-  // useEffect 
-   useEffect (() => {
-     console.log('counter: ' + counter) 
-   }, [counter])
-  
-  // increase counter
-  const increase = () => {
-    setCounter((count) => count + 1);
+  const incrementHandler = () => {
+    dispatch(counterActions.increment());
   };
 
-  // decrease counter, only if counter > 0
-  const decrease = () => {
-    if (counter > 0) {
-      setCounter((count) => count - 1);
-    }
+  const increaseHandler = () => {
+    dispatch(counterActions.increase(5));   // {type: SOME_UNIQUE_IDENTIFIER, payload}
   };
 
-  // reset counter
-  const reset = () => {
-    setCounter(0);
+  const decrementHandler = () => {
+    dispatch(counterActions.decrement());
   };
+
+  const resetHandler = () => {
+    dispatch(counterActions.reset());
+  };
+
 
   return (
-    <div className="counter">
-      <h2>Counter</h2>
-      <div className="btn-container">
-        <button className="control-btn" onClick={increase}>
-          <FaPlus />
-        </button>
-      <span className='counter-output'>{counter}</span>
-        <button className="control-btn" onClick={decrease}>
-          <FaMinus />
-        </button>
-        <button className="reset" onClick={reset}>
-          <FaHistory />
-        </button>
+    <div id="counterID">
+      <h2 className="text-center">Redux Counter</h2>
+      <div className="tracker text-light rounded-bottom">{counter}</div>
+      <div>
+        <button className="btn btn-warning" onClick={incrementHandler}><FaPlus /></button>
+        <button className="btn btn-warning" onClick={increaseHandler}>Increase by 5</button>
+        <button className="btn btn-warning" onClick={decrementHandler}><FaMinus /></button>
       </div>
+      <button className="btn btn-warning" onClick={resetHandler}><FaRedoAlt /></button>
     </div>
   );
 };
 
 export default ClickCounter;
+

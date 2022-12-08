@@ -32,12 +32,12 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-/* body {
-  padding-top: 90px;
-} */
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  
+}
 
 span {
   background-color: var(--yellow);
@@ -56,10 +56,8 @@ a:hover {
   cursor: pointer;
 }
 
-/* p {
-  font-size: 1.2rem;
-  line-height: 1.4;
-} */
+
+
 
 .btn {
   padding: 12px 32px;

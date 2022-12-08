@@ -8,7 +8,7 @@ const AlertContent = () => {
     return (
       <Container>
         <Alert variant="secondary" onClose={() => setShow(false)} dismissible>
-          Daten wurden erfolgreich versendet.
+          Hello I am an alert.
         </Alert>
       </Container>
     );

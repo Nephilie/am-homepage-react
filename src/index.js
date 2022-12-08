@@ -16,21 +16,27 @@ import Unternehmen from './pages/Unternehmen';
 import Karriere from './pages/Karriere';
 import Hooks from './pages/Hooks';
 
+// redux
+import store from './store/index'
+import { Provider } from 'react-redux';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <ScrollToTop/>
-    <Routes>
-      <Route path='/' element={<App />} />
-      <Route path='/dev' element={<DevPage />} />
-      <Route path='/ops' element={<OpsPage />} />
-      <Route path='/hlp' element={<HlpPage />} />
-      <Route path='/app' element={<AppPage />} />
-      <Route path='/unternehmen' element={<Unternehmen />} />
-      <Route path='/karriere' element={<Karriere />} />
-      <Route path='/hooks' element={<Hooks />} />
-    </Routes>
+    <Provider store={store}>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/dev' element={<DevPage />} />
+        <Route path='/ops' element={<OpsPage />} />
+        <Route path='/hlp' element={<HlpPage />} />
+        <Route path='/app' element={<AppPage />} />
+        <Route path='/unternehmen' element={<Unternehmen />} />
+        <Route path='/karriere' element={<Karriere />} />
+        <Route path='/hooks' element={<Hooks />} />
+      </Routes>
+    </Provider>
 
 
   </BrowserRouter>
